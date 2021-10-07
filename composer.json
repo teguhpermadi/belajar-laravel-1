@@ -12,6 +12,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.6",
+        "nwidart/laravel-modules": "^8.2",
         "webpatser/laravel-uuid": "3.0"
     },
     "require-dev": {
