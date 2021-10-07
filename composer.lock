@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10803261e393734ec924a20fd441a7c9",
+    "content-hash": "cd39aaebaeff750b61a6870e184c766d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1439,6 +1439,61 @@
             ],
             "description": "A front-end framework for Laravel.",
             "time": "2021-09-25T22:50:47+00:00"
+        },
+        {
+            "name": "mhmiton/laravel-modules-livewire",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mhmiton/laravel-modules-livewire.git",
+                "reference": "4b03b49eadc6e6bf80e73bd02b1aa5b8b42386ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mhmiton/laravel-modules-livewire/zipball/4b03b49eadc6e6bf80e73bd02b1aa5b8b42386ea",
+                "reference": "4b03b49eadc6e6bf80e73bd02b1aa5b8b42386ea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "laravel/framework": "^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mhmiton\\LaravelModulesLivewire\\LaravelModulesLivewireServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mhmiton\\LaravelModulesLivewire\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mehediul Hassan Miton",
+                    "email": "mhmiton.dev@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Using Laravel Livewire in Laravel Modules package with automatically registered livewire components for every modules.",
+            "keywords": [
+                "laravel",
+                "livewire",
+                "mhmiton",
+                "module",
+                "modules",
+                "nwidart"
+            ],
+            "time": "2021-07-02T19:12:01+00:00"
         },
         {
             "name": "monolog/monolog",
