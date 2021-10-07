@@ -11,6 +11,7 @@
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "laravolt/avatar": "^4.1",
         "livewire/livewire": "^2.6",
         "mhmiton/laravel-modules-livewire": "^1.2",
         "nwidart/laravel-modules": "^8.2",
