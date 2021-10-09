@@ -23,6 +23,7 @@ class UserSeeder extends Seeder
             'email' => 'tguh.permadi@gmail.com',
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10),
+            'is_active' => 'yes',
         ]);
     }
 }

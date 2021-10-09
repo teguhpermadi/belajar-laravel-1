@@ -11,6 +11,9 @@
 |
 */
 
+use Modules\Profile\Http\Controllers\ProfileController;
+
 Route::prefix('users')->group(function() {
     Route::get('/', 'UsersController@index');
+    Route::get('/show/{uuid}', [ProfileController::class, 'show'])->name('profile.show');
 });

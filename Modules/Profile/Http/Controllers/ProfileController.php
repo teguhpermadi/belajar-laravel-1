@@ -2,6 +2,7 @@
 
 namespace Modules\Profile\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -45,7 +46,14 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        return view('profile::show');
+        $user = User::findOrFail($id);
+        $me = Auth::user();
+        if($user->uuid == $me->uuid)
+        {
+            return view('profile::index')->with('user', $user);
+        } else {
+            return view('profile::show')->with('user', $user);
+        }
     }
 
     /**
