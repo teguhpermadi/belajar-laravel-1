@@ -14,10 +14,10 @@ class CreateSekolahsTable extends Migration
     public function up()
     {
         Schema::create('sekolahs', function (Blueprint $table) {
-            $table->uuid('uuid');
+            $table->uuid('id')->primary();
             $table->string('namasekolah');
             $table->string('npsn')->nullable();
-            $table->string('bentukpendidikan')->nullable();
+            $table->enum('bentuk', ['tk', 'sd', 'smp', 'sma']);
             $table->string('alamat')->nullable();
             $table->string('kelurahan')->nullable();
             $table->string('kecamatan')->nullable();
