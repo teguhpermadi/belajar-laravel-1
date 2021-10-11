@@ -13,4 +13,8 @@
 
 Route::prefix('profile')->group(function() {
     Route::get('/', 'ProfileController@index');
+    Route::get('/tes', function()
+    {
+        dd('tes');
+    })->name('profile.avatar.change');
 });
