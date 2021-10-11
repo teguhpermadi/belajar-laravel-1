@@ -23,6 +23,7 @@ class SekolahFactory extends Factory
             'namasekolah' => $this->faker->company(),
             'bentuk' => $this->faker->randomElement(['tk', 'sd', 'smp', 'sma']),
             'alamat' => $this->faker->address(),
+            'npsn' => $this->faker->randomNumber(6),
         ];
     }
 }

@@ -5,6 +5,8 @@ namespace Modules\Sekolah\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Sekolah\Entities\Sekolah;
+use Modules\Sekolah\Transformers\SekolahResource;
 
 class SekolahController extends Controller
 {
@@ -14,7 +16,9 @@ class SekolahController extends Controller
      */
     public function index()
     {
-        return view('sekolah::index');
+        $data = Sekolah::all();
+        return response()->json([SekolahResource::collection($data)]);
+        // return view('sekolah::index');
     }
 
     /**

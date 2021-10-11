@@ -15,7 +15,7 @@ class CreateSekolahsTable extends Migration
     {
         Schema::create('sekolahs', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('namasekolah');
+            $table->string('nama');
             $table->string('npsn')->nullable();
             $table->enum('bentuk', ['tk', 'sd', 'smp', 'sma']);
             $table->string('alamat')->nullable();
