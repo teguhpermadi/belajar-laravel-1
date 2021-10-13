@@ -36,17 +36,15 @@
                                 
                                 </td>
                                 <td><a href="{{ route('profile.show', ['id' => $user->id]) }}" class="text-primary">{{ $user->name }}</a></td>
-                                <td>{{ $user->is_active }}</td>
+                                <td>
+                                    @livewire('users::status', ['id' => $user->id])
+                                </td>
                                 <td>{{ $user->username }}</td>
                                 <td>{{ $user->phone }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>
                                     <button class="btn btn-sm btn-warning">edit</button>
-                                    @if ($user->is_active == 'yes')
-                                    <button class="btn btn-sm btn-danger">non aktif</button>
-                                    @else
-                                    <button class="btn btn-sm btn-primary">aktif</button>
-                                    @endif
+                                    <button class="btn btn-sm btn-info">show</button>
                                 </td>
                             </tr>
                         @endforeach

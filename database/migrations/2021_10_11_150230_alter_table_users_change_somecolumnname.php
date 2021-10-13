@@ -18,7 +18,7 @@ class AlterTableUsersChangeSomecolumnname extends Migration
             $table->string('username');
             $table->string('phone')->nullable();
             $table->string('avatar')->default('default');
-            $table->enum('is_active', ['yes', 'no'])->default('yes');
+            $table->enum('status', ['active', 'inactive'])->default('active');
         });
     }
 
