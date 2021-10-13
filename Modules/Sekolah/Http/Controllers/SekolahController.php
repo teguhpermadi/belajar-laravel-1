@@ -16,9 +16,7 @@ class SekolahController extends Controller
      */
     public function index()
     {
-        $data = Sekolah::all();
-        return response()->json([SekolahResource::collection($data)]);
-        // return view('sekolah::index');
+        return view('sekolah::index');
     }
 
     /**
