@@ -22,8 +22,19 @@
                         </thead>
                         @foreach ($users as $user)
                             <tr>
-                                <td><img src="{{ ($user->avatar == 'default') ? Avatar::create($user->name)->toBase64() : asset('storage/'.$user->avatar)}}"
-                                    alt="" class="rounded-circle h-9"></td>
+                                <td>
+                                    @if ($user->avatar == 'default')
+                                    <div class="rounded-circle h-9">
+                                        {!! Avatar::create($user->name)->setDimension(40)->setFontSize(16)->toSvg()  !!}
+                                    </div>
+                                    @else
+                                        <img src="{{ asset('storage/'.$user->avatar)}}" alt="Admin" class="rounded-circle h-9">
+                                    @endif
+
+                                    {{-- <img src="{{ ($user->avatar == 'default') ? Avatar::create($user->name)->toBase64() : asset('storage/'.$user->avatar)}}"
+                                    alt="" class="rounded-circle h-9"> --}}
+                                
+                                </td>
                                 <td><a href="{{ route('profile.show', ['id' => $user->id]) }}" class="text-primary">{{ $user->name }}</a></td>
                                 <td>{{ $user->is_active }}</td>
                                 <td>{{ $user->username }}</td>
