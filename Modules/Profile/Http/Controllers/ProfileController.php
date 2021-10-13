@@ -48,7 +48,7 @@ class ProfileController extends Controller
     {
         $user = User::findOrFail($id);
         $me = Auth::user();
-        if($user->uuid == $me->uuid)
+        if($user->id == $me->id)
         {
             return view('profile::index')->with('user', $user);
         } else {

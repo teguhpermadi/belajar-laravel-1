@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="container">
-        <div class="row mt-3">
+        <div class="w-24 md:w-auto mt-6">
             <div class="card">
                 <div class="card-body">
                     <table class="table table-hover">
@@ -22,9 +22,9 @@
                         </thead>
                         @foreach ($users as $user)
                             <tr>
-                                <td><img src="{{ (is_null($user->avatar)) ? Avatar::create($user->name)->toBase64() : asset('storage/'.$user->avatar)}}"
+                                <td><img src="{{ ($user->avatar == 'default') ? Avatar::create($user->name)->toBase64() : asset('storage/'.$user->avatar)}}"
                                     alt="" class="rounded-circle h-9"></td>
-                                <td><a href="{{ route('profile.show', ['uuid' => $user->uuid]) }}" class="text-primary">{{ $user->name }}</a></td>
+                                <td><a href="{{ route('profile.show', ['id' => $user->id]) }}" class="text-primary">{{ $user->name }}</a></td>
                                 <td>{{ $user->is_active }}</td>
                                 <td>{{ $user->username }}</td>
                                 <td>{{ $user->phone }}</td>

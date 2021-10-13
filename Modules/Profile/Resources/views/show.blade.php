@@ -12,7 +12,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                                <img src="{{ ($user->avatar == 'default') ? Avatar::create($user->name)->toBase64() : asset('storage/'.$user->avatar)}}" alt="Admin"
                                     class="rounded-circle" width="150">
                                 <div class="mt-3">
                                     <h4>{{ $user->name }}</h4>
