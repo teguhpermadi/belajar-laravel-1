@@ -26,10 +26,10 @@ class Avatar extends Component
     public function upload()
     {
         $this->validate([
-            'avatar' => 'image|mimes:png,jpg,jpeg',
+            'avatar' => 'required|mimes:png,jpg,jpeg',
         ]);
 
-        dd($this->avatarold);
+        // dd($this->avatarold);
         Storage::delete([$this->avatarold]);
  
         $path = $this->avatar->store('avatar', 'public');
