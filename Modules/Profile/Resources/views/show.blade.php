@@ -173,6 +173,11 @@
                     </div>
                 </div>
             </div>
+            <div class="row gutters-sm mt-3">
+                <div class="col-md-12">
+                    @livewire('profile::detil-profil', ['id' => $user->id])
+                </div>
+            </div>
         </div>
     </div>
 </x-app-layout>

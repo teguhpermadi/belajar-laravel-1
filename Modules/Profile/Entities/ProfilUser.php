@@ -3,16 +3,20 @@
 namespace Modules\Profile\Entities;
 
 use App\Models\User;
+use App\Traits\Uuids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class ProfilUser extends Model
 {
+    use Uuids;
     use HasFactory;
     
     public $table = "profil-user";
+    protected $primaryKey = 'id';
 
     protected $fillable = [
+        'user_id',
         'nik',
         'jenis_kelamin',
         'alamat',

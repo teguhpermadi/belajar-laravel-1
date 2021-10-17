@@ -15,6 +15,7 @@ class ProfilUser extends Migration
     {
         Schema::create('profil-user', function (Blueprint $table) {
             // $table->unsignedBigInteger('user_id');
+            $table->uuid('id')->primary();
             $table->uuid('user_id')->nullable(false);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('nik')->nullable();
